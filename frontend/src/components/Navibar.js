@@ -5,15 +5,23 @@ const Styles = styled.div`
 
 .navbar 
 {
-    background-color:#222;
+    background-color:#3c3c3d;
 }
 
-.navbar-brand, navbar-nav .nav-link{
+.navbar-brand{
     color: #bbb;
+    font-family: 'Marck Script', cursive;
+    font-size: 35px;
 
     &:hover{
         color: white;
     }
+}
+
+.nav-link{
+  font-size: 20px;
+  color: white;
+  font-family: 'Lora', serif;
 }
 
 `;
@@ -22,7 +30,7 @@ const Styles = styled.div`
 export const Navibar = () => (
     <Styles>
     <Navbar expand="lg">
-      <Navbar.Brand href="/">e.Events</Navbar.Brand>
+      <Navbar.Brand href="../">e.Events</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
@@ -30,7 +38,7 @@ export const Navibar = () => (
             <Nav.Link href="../">Home</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="../page/AboutUs">About Us</Nav.Link>
+            <Nav.Link href="../page/AboutUs"><p>About Us</p></Nav.Link>
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>

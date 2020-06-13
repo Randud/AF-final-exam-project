@@ -6,12 +6,14 @@ import {AboutUs} from './page/AboutUs';
 import {NoMatch} from './page/NoMatch';
 import {Layout} from './components/Layout';
 import {Navibar} from './components/Navibar';
+import {Jumbotron} from './components/Jumbotron';
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
         <Navibar />
+        <Jumbotron/>
         <Layout>
         <Router>
           <Switch>
