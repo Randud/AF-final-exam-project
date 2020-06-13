@@ -19,14 +19,9 @@
  
 //handle CORS errors
 app.use((req, res, next) =>{
-    res.header('Access-Control-Allow-Orgin', '*');
-    res.header(
-        'Access-Control-Allow-Header', '*');
-        if(req.method === 'OPTIONS')
-        {
-            res.header( 'Access-Control-Allow-Header', 'PUT, POST, PATCH, DELETE, GET');
-            return res.status(200).json({});
-        }
+    res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
         next();
 });
 
