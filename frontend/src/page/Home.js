@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {Container} from 'react-bootstrap';
 import AddNewEvent from '../components/AddNewEvent';
+import EventView from '../components/EventView';
 import Popup from "reactjs-popup";
 import Button from 'react-bootstrap/Button';
 
@@ -47,7 +48,9 @@ export const Home = () => (
                     >
                         <AddNewEvent/>
                     </Popup>
-                    
+                    <br/> <br/> <br/>
+                    <EventView />
+  
             </div>
      </div>
       </Container>
