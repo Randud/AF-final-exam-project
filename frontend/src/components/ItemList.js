@@ -17,29 +17,25 @@ class ItemList extends Component {
 
     render() {
         return (
-           // _id: props._id,
-            // name: '',
-            // description: '',
-            // venue: '',
-            // date: '',
-            // time: '',
-            // phone: '',
-            // social: '',
-
+       
             <div>
-                <Card className="text-center">
-                    <Card.Header>{this.props.obj.name}</Card.Header>
-                    <Card.Body>
-                        <Card.Title>Special title treatment</Card.Title>
-                        <Card.Text>
-                        With supporting text below as a natural lead-in to additional content.
-                        </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
-                    </Card.Body>
-                    <Card.Footer className="text-muted">2 days ago</Card.Footer>
-                 </Card>
-                 <br/><br/>
-            
+                 <Card style={{ width: '38rem' }}>
+                <Card.Body>
+                    <Card.Title>{this.props.obj.name}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">{this.props.obj.venue}</Card.Subtitle>
+                    <Card.Text>
+                    {this.props.obj.description}
+                    </Card.Text>
+                    <Card.Text>
+                        Date - {this.props.obj.date} <br/>
+                        Time - {this.props.obj.time} <br/>
+                        Contact Number - {this.props.obj.phone}
+                    </Card.Text>
+                    <Card.Subtitle className="mb-2 text-muted">{this.props.obj.social}</Card.Subtitle>
+                    <div style={{ marginLeft: '190px'}}> <Button variant="outline-danger">DELETE</Button><Button style={{ marginLeft: '30px'}} variant="outline-info">EDIT</Button></div>
+                </Card.Body>
+                </Card>
+                <br/><br/>
             </div>
            
         );
